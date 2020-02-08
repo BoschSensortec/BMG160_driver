@@ -1923,7 +1923,7 @@ struct bmg160_t
  *    - Number of bytes to be read from the FIFO should be mapped to the member
  *     "fifo_length" of this structure
  */
-struct fifo_configuration
+struct bmg160_fifo_configuration
 {
     /*! Data buffer of user defined length is to be mapped here */
     u8 *fifo_data;
@@ -4657,10 +4657,10 @@ BMG160_RETURN_FUNCTION_TYPE bmg160_set_gp(u8 v_param_u8, u8 v_gp_u8);
 /*!
  *  @brief This API reads the FIFO data from the register 0x3F
  *  and store the data in the user defined buffer mapped to the member
- *  of structure "fifo_configuration"
+ *  of structure "bmg160_fifo_configuration"
  *
  *  @note Before calling this API user must map the following FIFO settings
- *  required to read the FIFO data to the structure "fifo_configuration"
+ *  required to read the FIFO data to the structure "bmg160_fifo_configuration"
  *    - Data buffer to store the FIFO data is mapped to
  *      the structure member "fifo_data"
  *    - Number of bytes to be read from FIFO is mapped to
@@ -4675,7 +4675,7 @@ BMG160_RETURN_FUNCTION_TYPE bmg160_set_gp(u8 v_param_u8, u8 v_gp_u8);
  *  @retval -127 -> Null Pointer Error
  *
  */
-BMG160_RETURN_FUNCTION_TYPE bmg160_read_fifo_data(struct fifo_configuration *fifo_conf);
+BMG160_RETURN_FUNCTION_TYPE bmg160_read_fifo_data(struct bmg160_fifo_configuration *fifo_conf);
 
 /*!
  *  @brief this api is used to read the fifo status

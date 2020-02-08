@@ -6204,10 +6204,10 @@ BMG160_RETURN_FUNCTION_TYPE bmg160_set_gp(u8 v_param_u8, u8 v_gp_u8)
 /*!
  *  @brief This API reads the FIFO data from the register 0x3F
  *  and store the data in the user defined buffer mapped to the member
- *  of structure "fifo_configuration"
+ *  of structure "bmg160_fifo_configuration"
  *
  *  @note Before calling this API user must map the following FIFO settings
- *  required to read the FIFO data to the structure "fifo_configuration"
+ *  required to read the FIFO data to the structure "bmg160_fifo_configuration"
  *    - Data buffer to store the FIFO data is mapped to
  *      the structure member "fifo_data"
  *    - Number of bytes to be read from FIFO is mapped to
@@ -6222,7 +6222,7 @@ BMG160_RETURN_FUNCTION_TYPE bmg160_set_gp(u8 v_param_u8, u8 v_gp_u8)
  *  @retval -127 -> Null Pointer Error
  *
  */
-BMG160_RETURN_FUNCTION_TYPE bmg160_read_fifo_data(struct fifo_configuration *fifo_conf)
+BMG160_RETURN_FUNCTION_TYPE bmg160_read_fifo_data(struct bmg160_fifo_configuration *fifo_conf)
 {
     /* variable used to return the bus communication status*/
     BMG160_RETURN_FUNCTION_TYPE comres;
